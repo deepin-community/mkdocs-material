@@ -1,15 +1,69 @@
-Source: template-repository
-Section: unknown
+Source: mkdocs-material
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               mkdocs,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-hatch-nodejs-version,
+               python3-hatch-requirements-txt,
+               python3-hatchling,
+               python3-jinja2,
+               python3-markdown,
+               python3-pygments,
+               python3-setuptools,
+Standards-Version: 4.6.0.1
+Homepage: https://squidfunk.github.io/mkdocs-material/
+Vcs-Git: https://salsa.debian.org/debian/mkdocs-material.git
+Vcs-Browser: https://salsa.debian.org/debian/mkdocs-material
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: mkdocs-material
+Architecture: all
+Depends: mkdocs,
+         ${misc:Depends},
+         ${python3:Depends},
+Description: Material Design theme for MkDocs
+ Create a branded static site from a set of Markdown files to host the
+ documentation of your Open Source or commercial project – customizable,
+ searchable, mobile-friendly, 40+ languages. Set up in 5 minutes.
+ .
+ Features:
+ .
+   * It's just Markdown — write your technical documentation in plain Markdown –
+     no need to know HTML, JavaScript, or CSS. Material for MkDocs will do the
+     heavy lifting and convert your writing to a beautiful and functional
+     website.
+ .
+   * Responsive by design — built from the ground up to work on all sorts of
+     devices – from mobile phones to widescreens. The underlying fluid layout
+     will always adapt perfectly to the available screen space.
+ .
+   * Static, yet searchable — almost magically, your technical documentation
+     website will be searchable without any further ado. Material for MkDocs
+     comes with built-in search – no server needed – that will instantly answer
+     your users' queries.
+ .
+   * Many configuration options — change the color palette, font families,
+     language, icons, favicon and logo. Add a source repository link, links to
+     your social profiles, Google Analytics and Disqus - all with a few lines of
+     code.
+ .
+   * Truly international — thanks to many contributors, Material for MkDocs
+     includes translations for more than 40 languages and offers full native RTL
+     uright-to-left) support for languages such as Arabic, Persian (Farsi) and
+     Hebrew.
+ .
+   * Accessible — Material for MkDocs provides extensible keyboard navigation
+     and  semantic markup including role attributes and landmarks. Furthermore,
+     the layout is entirely based on rem values, respecting the user's default
+     font size.
+ .
+   * Beyond GitHub Markdown — integrates natively with Python Markdown
+     Extensions, offering additional elements like callouts, tabbed content
+     containers, mathematical formulas, critic markup, task lists, and emojis.
+ .
+   * Modern architecture — Material for MkDocs's underlying codebase is built
+     with TypeScript, RxJS, and SCSS, and is compiled with Webpack, bringing
+     excellent possibilities for theme extension and customization.
